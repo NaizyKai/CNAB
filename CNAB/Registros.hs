@@ -8,8 +8,10 @@ data Registro = Registro { posicao :: Int
                          , maxlen  :: Int
                          , tipo    :: TipoRegistro
                          , valor   :: [Char]
-                         } deriving (Eq)
+                         }
 
+instance Eq Registro where
+    a == b = posicao a == posicao b
 
 instance Ord Registro where
     a `compare` b = posicao a `compare` posicao b
