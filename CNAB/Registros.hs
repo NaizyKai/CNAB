@@ -27,8 +27,3 @@ padValue :: Registro -> Char
 padValue a
     | tipo a == Numerico     = '0'
     | tipo a == Alfanumerico = ' '
-
-
-
-
-
